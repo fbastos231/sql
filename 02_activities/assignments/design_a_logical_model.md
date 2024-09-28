@@ -24,13 +24,13 @@ Bonus: Are there privacy implications to this, why or why not?
 #### Type 1 Slowly Changing Dimension
 - This time type of archtecture would overwrite customer addresses as they are updated.
 
-![02_type1_SCD.png](./images/02_type1_SCD.png)
+    ![02_type1_SCD.png](./images/02_type1_SCD.png)
 
 
 #### Type 2 Slowly Changing Dimension
 - This time type of archtecture would keep a history of the customer addresses as they are updated. It would create new rows each time the address is updated for a customer. Note that this architecture also contains a current flag. The privacy implication in this architecture is that it provides the database with information about the moving history of this customer and this information is not strictly needed by the book store to conduct its business.
 
-![03_type2_SCD.png](./images/03_type2_SCD.png)
+    ![03_type2_SCD.png](./images/03_type2_SCD.png)
 
 
 ## Question 4
