@@ -8,6 +8,10 @@ At the minimum it should have employee, order, sales, customer, and book entitie
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
+### Answer 1 & 2:
+
+-  ![Question1&2_submission.png](./images/01_question1&2_submission.png)
+
 ## Question 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2?
 
@@ -15,8 +19,21 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+Type 2 slowly changing dimentions 
 ```
+
+### Answer 3:
+
+#### Type 1 Slowly Changing Dimension
+- This time type of archtecture would overwrite customer addresses as they are updated.
+
+-  ![Question3_type1_submission.png](./images/02_type1_SCD.png)
+
+#### Type 2 Slowly Changing Dimension
+- This time type of archtecture would keep a history of the customer addresses as they are updated as it would create new rows each time the address is updated for a customer. Note that this archtechture also contains a current flag. The privacy implication in this archtecture is that it provides the database with information about the moving history of this customer and this information is not strictly needed by the book store to conduct its business.
+
+-  ![Question3_type2_submission.png](./images/03_type2_SCD.png)
+
 
 ## Question 4
 Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
