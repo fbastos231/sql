@@ -27,12 +27,12 @@ Type 2 slowly changing dimentions
 #### Type 1 Slowly Changing Dimension
 - This time type of archtecture would overwrite customer addresses as they are updated.
 
--  ![Question3_type1_submission.png](./images/02_type1_SCD.png)
+-  ![type1_submission.png](./images/02_type1_SCD.png)
 
 #### Type 2 Slowly Changing Dimension
 - This time type of archtecture would keep a history of the customer addresses as they are updated as it would create new rows each time the address is updated for a customer. Note that this archtechture also contains a current flag. The privacy implication in this archtecture is that it provides the database with information about the moving history of this customer and this information is not strictly needed by the book store to conduct its business.
 
--  ![Question3_type2_submission.png](./images/03_type2_SCD.png)
+-  ![type2_submission.png](./images/03_type2_SCD.png)
 
 
 ## Question 4
