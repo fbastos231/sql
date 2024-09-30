@@ -8,23 +8,40 @@ At the minimum it should have employee, order, sales, customer, and book entitie
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
+### Answer 1 & 2:
+
+![Question1&2_submission.png](./images/01_question1&2_submission.png)
+
 ## Question 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2?
 
 _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
-```
-Your answer...
-```
+
+### Answer 3:
+
+#### Type 1 Slowly Changing Dimension
+- This time type of archtecture would overwrite customer addresses as they are updated.
+
+    ![02_type1_SCD.png](./images/02_type1_SCD.png)
+
+
+#### Type 2 Slowly Changing Dimension
+- This time type of archtecture would keep a history of the customer addresses as they are updated. It would create new rows each time the address is updated for a customer. Note that this architecture also contains a current flag (true or false). The privacy implication in this architecture is that it provides the database with information about the moving history of this customer and this information is not strictly needed by the book store to conduct its business.
+
+    ![03_type2_SCD.png](./images/03_type2_SCD.png)
+
 
 ## Question 4
 Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
-```
-Your answer...
-```
+
+### Answer 4:
+
+- Some of the differences between this submission and the provided referece are:
+The AdventureWorks schema appears to be a collection of schemas as it lists schemas on the left hand side, purchasing, sales, person etc. It details the primary and foreign keys for each table. It also appears to have tables regarding data about the database it self, such as the errorlog or databaselog tables.
 
 # Criteria
 
